@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+    /* colors */
+    --color-primary: #6A4CE2;
+    --color-secondary: #023047;
+
+    /* text */
+    --text-main-heading: 4.5rem;
+    --text-bigger: 3rem;
+    --text-big: 2.5rem;
+    --text-normal: 2rem;
+    --text-small: 1.5rem;
+    --text-smaller: 1rem;
+    --text-smallest: .85rem;
+}
+
+@layer base {
+    * {
+        @apply p-0 m-0 box-border scroll-smooth
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    section {
+        @apply mx-10 my-5 min-h-screen;
+    }
+}
+
+@layer components {
+    .main-heading {
+        @apply text-main-heading uppercase font-semibold tracking-wider leading-12
+    }
+
+    .sub-heading {
+        @apply font-semibold tracking-wider text-big
+    }
+
+    .flex-center {
+        @apply flex items-center justify-center
+    }
+
+    .flex-between {
+        @apply flex items-center justify-between
+    }
+
+    .flex-around {
+        @apply flex items-center justify-around
+    }
+}
