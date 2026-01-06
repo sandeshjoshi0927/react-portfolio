@@ -5,7 +5,7 @@ const Navigation = () => {
   const menuItems = [
     { title: "Home", path: "#" },
     { title: "Skills", path: "#skills" },
-    { title: "Porfolio", path: "#portfolio" },
+    { title: "Portfolio", path: "#portfolio" },
     { title: "Service", path: "#service" },
   ];
 

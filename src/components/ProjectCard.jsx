@@ -60,8 +60,8 @@ const ProjectCard = ({ project }) => {
           )}
         </div>
       </div>
-      <div className="rounded-bl-2xl rounded-br-2xl bg-secondary text-white flex flex-col px-3 py-1.5 gap-1">
-        <h2 className="text-small">{project.name}</h2>
+      <div className="rounded-bl-2xl rounded-br-2xl bg-secondary text-white flex flex-col p-4 gap-2">
+        <h2 className="text-small font-semibold">{project.name}</h2>
         <p className="text-smaller truncate">{project.desc}</p>
         <div className="text-smallest flex items-center gap-3">
           {project.techStacks.map((stack) => (

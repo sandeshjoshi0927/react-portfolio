@@ -1,11 +1,21 @@
-const Button = ({ children, className, color, to }) => {
+const Button = ({ children, className, color, to, ...rest }) => {
   const defaultClassName =
-    "px-6 py-2 text-white rounded-md text-smaller cursor-pointer";
+    "px-6 py-2 text-white rounded-md text-smaller cursor-pointer inline";
+
+  const handleClick = () => {
+    if (to) {
+      window.location.href = to;
+    }
+  };
 
   return (
-    <div className={`${color} ${defaultClassName} ${className}`}>
-      <a href={to}>{children}</a>
-    </div>
+    <button
+      className={`${color} ${defaultClassName} ${className}`}
+      {...rest}
+      onClick={to ? handleClick : undefined}
+    >
+      {children}
+    </button>
   );
 };
 
