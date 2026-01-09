@@ -34,7 +34,7 @@ const AboutSection = () => {
         >
           Resume
         </Button>
-        <div className="flex gap-2 items-center text-small">
+        <div className="flex gap-2 items-center text-smaller">
           Follow me:
           {socials.map((social) => (
             <a href={social.url} target="_blank" className="text-normal">

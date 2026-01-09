@@ -31,7 +31,7 @@ const Navigation = () => {
 
   return (
     <div className="sticky top-0 bg-white opacity-95 z-99">
-      <div className="grid grid-cols-12 items-center py-4 px-10 container m-auto bg-red-400 w-full">
+      <div className="grid grid-cols-12 items-center py-4 px-10 container m-auto w-full">
         <div className="col-span-2">SJ</div>
         <div className="col-span-10 hidden md:grid grid-cols-12 items-center">
           <ul className="col-span-10 flex-around">
@@ -53,10 +53,7 @@ const Navigation = () => {
         </div>
 
         {/* mobile navigation */}
-        <div
-          className="col-span-10 flex justify-end md:hidden bg-red-300"
-          ref={mobileRef}
-        >
+        <div className="col-span-10 flex justify-end md:hidden" ref={mobileRef}>
           <GiHamburgerMenu
             className="text-secondary"
             onClick={() => setOpenMobileMenu(!openMobileMenu)}
