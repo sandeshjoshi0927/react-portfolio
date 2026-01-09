@@ -19,7 +19,7 @@ const ProjectCard = ({ project }) => {
   }, [openViewMore]);
 
   return (
-    <div className="hover:drop-shadow-xl w-full md:w-80 lg:w-90">
+    <div className="hover:drop-shadow-xl h-full">
       <div className="relative">
         <img
           src={project.thumbnail}

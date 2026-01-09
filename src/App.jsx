@@ -26,7 +26,7 @@ function App() {
         <ContactSection />
       </div>
 
-      {/* <FooterSection /> */}
+      <FooterSection />
     </div>
   );
 }

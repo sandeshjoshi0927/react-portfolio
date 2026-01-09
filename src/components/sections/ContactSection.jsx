@@ -4,8 +4,8 @@ import Button from "@components/Button";
 
 const ContactSection = () => {
   return (
-    <div class="mx-10 my-20 grid grid-cols-12 gap-4 lg:gap-10" id="contact">
-      <div class="col-span-10 lg:col-span-5">
+    <div className="mx-10 my-20 grid grid-cols-12 gap-4 lg:gap-10" id="contact">
+      <div className="col-span-10 lg:col-span-5">
         <h1 className="text-big">
           Let's Chat. <br />
           Get in touch with me.
@@ -24,7 +24,7 @@ const ContactSection = () => {
           </p>
         </div>
       </div>
-      <div class="col-span-12 lg:col-span-7">
+      <div className="col-span-12 lg:col-span-7">
         <form
           action="https://formspree.io/f/xzbndvvr"
           method="POST"

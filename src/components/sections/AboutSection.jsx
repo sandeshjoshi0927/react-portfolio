@@ -13,13 +13,20 @@ const AboutSection = () => {
     },
   ];
   return (
-    <div className="grid grid-cols-6 gap-10 items-center">
-      <div className="col-span-6 lg:col-span-4 space-y-8">
+    <div className="grid grid-cols-6 gap-4 md:gap-8 items-center">
+      <div className="col-span-2 lg:w-full">
+        <img
+          src="me.jpg"
+          alt="image"
+          className="rounded-lg object-cover w-full h-full  aspect-3/4 "
+        />
+      </div>
+      <div className="col-span-6 lg:col-span-4 space-y-4">
         <div>
           <span className="main-heading">Sandesh Joshi</span>
           <p className="sub-heading">
             a <span className="text-primary opacity-65">Software Engineer</span>{" "}
-            I{/* TODO */}
+            {/* TODO */}
           </p>
         </div>
         <p className="text-smaller font-normal opacity-40">
@@ -36,19 +43,17 @@ const AboutSection = () => {
         </Button>
         <div className="flex gap-2 items-center text-smaller">
           Follow me:
-          {socials.map((social) => (
-            <a href={social.url} target="_blank" className="text-normal">
+          {socials.map((social, index) => (
+            <a
+              key={index}
+              href={social.url}
+              target="_blank"
+              className="text-normal"
+            >
               {social.icon}
             </a>
           ))}
         </div>
-      </div>
-      <div className="col-span-2 hidden lg:block aspect-3/4 lg:w-full">
-        <img
-          src="me.jpg"
-          alt="image"
-          className="rounded-2xl object-cover w-full h-full"
-        />
       </div>
     </div>
   );

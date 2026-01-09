@@ -6,11 +6,7 @@ const FooterSection = () => {
     <>
       <div className="container m-auto">
         <div className="mx-10 my-5">
-          <ul>
-            <LinkItem />
-          </ul>
-
-          <p className="text-center">
+          <p className="text-right text-small">
             Built by <span className="text-primary">Sandesh Joshi</span>
           </p>
         </div>

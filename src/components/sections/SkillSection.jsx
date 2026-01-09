@@ -100,7 +100,7 @@ const SkillSection = () => {
         subTitle="Tools & Technologies I am confident in"
       />
       <div className="flex flex-col">
-        <div className="flex items-center justify-evenly flex-wrap gap-2 p-4 text-smaller">
+        <div className="flex items-center justify-evenly flex-wrap gap-2 p-4 text-smaller mb-4">
           {skills.map((skill, index) => (
             <div
               key={index}
@@ -115,11 +115,11 @@ const SkillSection = () => {
             </div>
           ))}
         </div>
-        <div className="flex flex-wrap items-center justify-between gap-6 lg:gap-10">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 lg:gap-8">
           {selectedSkill.map((skill) =>
-            skill.details.map((detail) => (
-              <div className="grow flex flex-col items-center w-30">
-                <div className="w-14 h-14 sm:w-20 sm:h-20 lg:w-30 lg:h-30 p-3 rounded-full bg-secondary text-white flex text-icons items-center justify-center">
+            skill.details.map((detail, index) => (
+              <div key={index} className="flex flex-col items-center">
+                <div className="p-3 rounded-full bg-secondary text-white flex text-icons items-center justify-center">
                   {detail.icon ? detail.icon : <FaBan />}
                 </div>
                 <div className="text-center text-small text-wrap">
