@@ -14,10 +14,10 @@ function App() {
         <section>
           <AboutSection />
         </section>
-        {/*  <section>
+        <section>
           <SkillSection />
         </section>
-        <section>
+        {/*<section>
           <PortfolioSection />
         </section>
         <section>

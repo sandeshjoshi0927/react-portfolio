@@ -34,12 +34,12 @@ const SkillSection = () => {
     {
       title: "Frontend",
       details: [
-        { icon: <FaReact />, name: "React JS" },
-        { icon: <RiNextjsFill />, name: "Next JS" },
         { icon: <FaHtml5 />, name: "HTML5" },
         { icon: <FaCss3Alt />, name: "CSS3" },
         { icon: <FaBootstrap />, name: "Bootstrap" },
         { icon: <RiTailwindCssFill />, name: "Tailwind CSS" },
+        { icon: <FaReact />, name: "React JS" },
+        { icon: <RiNextjsFill />, name: "Next JS" },
         { icon: <SiMui />, name: "Material UI" },
       ],
     },
@@ -100,12 +100,12 @@ const SkillSection = () => {
         subTitle="Tools & Technologies I am confident in"
       />
       <div className="flex flex-col">
-        <div className="flex items-center justify-evenly p-4 text-smaller">
+        <div className="flex items-center justify-evenly flex-wrap gap-2 p-4 text-smaller">
           {skills.map((skill, index) => (
             <div
               key={index}
               onClick={() => handleClick(skill.title)}
-              className={`cursor-pointer border-t border-l border-r px-4 py-2 rounded ${
+              className={`w-full min-[420px]:w-fit text-center cursor-pointer border-t border-l border-r px-4 py-2 rounded ${
                 selectedSkill[0].title == skill.title
                   ? "border-b-3 border-primary decoration-3"
                   : "border-b"
@@ -115,14 +115,16 @@ const SkillSection = () => {
             </div>
           ))}
         </div>
-        <div className="grid grid-cols-12 gap-10 place">
+        <div className="flex flex-wrap items-center justify-between gap-6 lg:gap-10">
           {selectedSkill.map((skill) =>
             skill.details.map((detail) => (
-              <div className="px-10 py-2 space-y-2 col-span-3 grid place-content-center">
-                <div className="w-30 h-30 rounded-full bg-secondary text-white flex text-6xl items-center justify-center">
+              <div className="grow flex flex-col items-center w-30">
+                <div className="w-14 h-14 sm:w-20 sm:h-20 lg:w-30 lg:h-30 p-3 rounded-full bg-secondary text-white flex text-icons items-center justify-center">
                   {detail.icon ? detail.icon : <FaBan />}
                 </div>
-                <div className="text-center">{detail.name}</div>
+                <div className="text-center text-small text-wrap">
+                  {detail.name}
+                </div>
               </div>
             ))
           )}
