@@ -11,11 +11,8 @@ const ProjectCard = ({ project }) => {
   const btnRef = useRef(null);
 
   useEffect(() => {
-    console.log(btnRef.current);
-
     const handleClickOutside = (e) => {
       if (btnRef.current && !btnRef.current.contains(e.target)) {
-        console.log(e.target);
         setViewMore(false);
       }
     };

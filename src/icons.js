@@ -28,6 +28,8 @@ import { IoMdMore } from "react-icons/io";
 import { FaPlayCircle } from "react-icons/fa";
 import { FaChevronCircleDown } from "react-icons/fa";
 import { IoMdMailOpen } from "react-icons/io";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { FaLinkedin } from "react-icons/fa";
 
 export {
   FaReact,
@@ -60,4 +62,6 @@ export {
   FaPlayCircle,
   FaChevronCircleDown,
   IoMdMailOpen,
+  GiHamburgerMenu,
+  FaLinkedin,
 };

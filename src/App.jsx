@@ -14,7 +14,7 @@ function App() {
         <section>
           <AboutSection />
         </section>
-        <section>
+        {/*  <section>
           <SkillSection />
         </section>
         <section>
@@ -24,9 +24,10 @@ function App() {
           <ServiceSection />
         </section>
         <ContactSection />
+         */}
       </div>
 
-      <FooterSection />
+      {/* <FooterSection /> */}
     </div>
   );
 }

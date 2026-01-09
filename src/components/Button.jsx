@@ -1,6 +1,6 @@
 const Button = ({ children, className, color, to, ...rest }) => {
   const defaultClassName =
-    "px-6 py-2 text-white rounded-md text-smaller cursor-pointer inline";
+    "px-3 py-1 lg:px-6 lg:py-2 text-white rounded-md text-smaller cursor-pointer inline text-center";
 
   const handleClick = () => {
     if (to) {

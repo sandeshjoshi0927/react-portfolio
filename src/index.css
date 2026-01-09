@@ -6,13 +6,13 @@
     --color-secondary: #023047;
 
     /* text */
-    --text-main-heading: 4.5rem;
-    --text-bigger: 3rem;
-    --text-big: 2.5rem;
-    --text-normal: 2rem;
-    --text-small: 1.5rem;
-    --text-smaller: 1rem;
-    --text-smallest: .85rem;
+    --text-main-heading: clamp(1.75rem, 7vw, 4.5rem);
+    --text-bigger: clamp(1.5rem, 5vw, 3rem);
+    --text-big: clamp(1.25rem, 4vw, 2.5rem);
+    --text-normal: clamp(1rem, 1.2vw, 1.25rem);
+    --text-small: clamp(0.875rem, 1vw, 1rem);
+    --text-smaller: clamp(0.75rem, 1vw, 0.9rem);
+    --text-smallest: clamp(0.55rem, 1vw, 0.8rem);
 }
 
 @layer base {
@@ -24,6 +24,11 @@
         font-family: 'Poppins', sans-serif;
     }
 
+    li {
+        text-decoration: none;
+        list-style: none;
+    }
+
     section {
         @apply mx-10 my-5 min-h-screen;
     }
@@ -31,7 +36,7 @@
 
 @layer components {
     .main-heading {
-        @apply text-main-heading uppercase font-semibold tracking-wider leading-12
+        @apply text-main-heading uppercase font-semibold tracking-wider leading-12;
     }
 
     .sub-heading {
