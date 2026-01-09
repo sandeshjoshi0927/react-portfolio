@@ -46,9 +46,9 @@ const PortfolioSection = () => {
   return (
     <div className="space-y-10" id="portfolio">
       <Heading title="Projects" subTitle="Some of the works I have done" />
-      <div className="grid grid-cols-12 gap-10">
-        {projects.map((project) => (
-          <ProjectCard project={project} />
+      <div className="flex items-center justify-between gap-4 flex-wrap">
+        {projects.map((project, index) => (
+          <ProjectCard key={index} project={project} />
         ))}
       </div>
     </div>

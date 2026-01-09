@@ -4,13 +4,11 @@ import { IoMdMore, FaPlayCircle, FaGithub } from "../icons";
 const ProjectCard = ({ project }) => {
   const [openViewMore, setViewMore] = useState(false);
 
-  const handleClick = () => {
-    setViewMore(!openViewMore);
-  };
-
   const btnRef = useRef(null);
 
   useEffect(() => {
+    if (!openViewMore) return;
+
     const handleClickOutside = (e) => {
       if (btnRef.current && !btnRef.current.contains(e.target)) {
         setViewMore(false);
@@ -18,20 +16,20 @@ const ProjectCard = ({ project }) => {
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [setViewMore]);
+  }, [openViewMore]);
 
   return (
-    <div className="col-span-4 hover:drop-shadow-xl">
-      <div className="aspect-6/2 w-full h-full relative">
+    <div className="hover:drop-shadow-xl w-full md:w-80 lg:w-90">
+      <div className="relative">
         <img
           src={project.thumbnail}
           alt="project"
-          className="object-cover w-full h-full rounded-tr-2xl rounded-tl-2xl border-l border-t border-r border-secondary grayscale-50"
+          className="object-cover rounded-tr-2xl rounded-tl-2xl border-l border-t border-r border-secondary grayscale-50"
         />
         <div
           className="absolute text-white z-98 top-2 right-2 p-2 rounded-full bg-secondary text-small cursor-pointer"
           ref={btnRef}
-          onClick={handleClick}
+          onClick={() => setViewMore(!openViewMore)}
         >
           <IoMdMore />
 
@@ -61,8 +59,8 @@ const ProjectCard = ({ project }) => {
         <h2 className="text-small font-semibold">{project.name}</h2>
         <p className="text-smaller truncate">{project.desc}</p>
         <div className="text-smallest flex items-center gap-3">
-          {project.techStacks.map((stack) => (
-            <span className="flex items-center gap-1">
+          {project.techStacks.map((stack, idx) => (
+            <span key={idx} className="flex items-center gap-1">
               {stack.icon}
               {stack.name}
             </span>
