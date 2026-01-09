@@ -2,7 +2,7 @@ import React from "react";
 
 const ServiceCard = ({ service, index }) => {
   return (
-    <div className="bg-secondary text-white p-10 col-span-4 place-items-start border-l-8 border-transparent hover:border-l-8 hover:border-primary hover:transition-discrete duration-300 hover:drop-shadow-2xl ease-in-out flex flex-col">
+    <div className="bg-secondary text-white p-4 flex h-full flex-col justify-between rounded-xl">
       <h1 className="text-main-heading text-primary brightness-150 flex flex-start">
         0{index + 1}
       </h1>

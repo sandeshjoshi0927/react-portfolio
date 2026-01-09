@@ -20,10 +20,10 @@ function App() {
         <section>
           <PortfolioSection />
         </section>
-        {/*<section>
+        <section>
           <ServiceSection />
         </section>
-        <ContactSection />
+        {/*<ContactSection />
          */}
       </div>
 
