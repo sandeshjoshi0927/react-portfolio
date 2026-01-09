@@ -23,8 +23,7 @@ function App() {
         <section>
           <ServiceSection />
         </section>
-        {/*<ContactSection />
-         */}
+        <ContactSection />
       </div>
 
       {/* <FooterSection /> */}
