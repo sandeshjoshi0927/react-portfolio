@@ -21,6 +21,10 @@
         @apply p-0 m-0 box-border scroll-smooth
     }
 
+    html {
+        scroll-padding-top: 72px;
+    }
+
     body {
         font-family: 'Poppins', sans-serif;
     }
@@ -31,7 +35,7 @@
     }
 
     section {
-        @apply mx-10 my-5 min-h-screen;
+        @apply mx-10 min-h-screen grid items-center;
     }
 }
 

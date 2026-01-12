@@ -30,7 +30,7 @@ const AboutSection = () => {
         </p>
         <Button className="text-smaller hover:opacity-85" color="bg-primary">
           <a href="@assets/SANDESH JOSHI PCV.pdf" download>
-            Resume
+            Download Resume
           </a>
         </Button>
         <div className="flex gap-2 items-center text-smaller">
