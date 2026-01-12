@@ -5,22 +5,33 @@ import SkillSection from "@sections/SkillSection";
 import ServiceSection from "@sections/ServiceSection";
 import ContactSection from "@sections/ContactSection";
 import FooterSection from "@sections/FooterSection";
+import "aos/dist/aos.css";
+import AOS from "aos";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-out",
+      once: false,
+    });
+  }, []);
+
   return (
     <div>
       <Navigation />
       <div className="container m-auto">
-        <section>
+        <section data-aos="fade-down">
           <AboutSection />
         </section>
-        <section>
+        <section data-aos="fade-down">
           <SkillSection />
         </section>
-        <section>
+        <section data-aos="fade-down">
           <PortfolioSection />
         </section>
-        <section>
+        <section data-aos="fade-down">
           <ServiceSection />
         </section>
         <ContactSection />
