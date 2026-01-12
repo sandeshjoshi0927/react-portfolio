@@ -1,5 +1,6 @@
 import Button from "@components/Button";
 import { FaLinkedin, FaGithub } from "@/icons";
+import profilePicture from "@assets/me.jpg";
 
 const AboutSection = () => {
   const socials = [
@@ -14,13 +15,6 @@ const AboutSection = () => {
   ];
   return (
     <div className="grid grid-cols-6 gap-4 md:gap-8 items-center">
-      <div className="col-span-2 lg:w-full">
-        <img
-          src="me.jpg"
-          alt="image"
-          className="rounded-lg object-cover w-full h-full  aspect-3/4 "
-        />
-      </div>
       <div className="col-span-6 lg:col-span-4 space-y-4">
         <div>
           <span className="main-heading">Sandesh Joshi</span>
@@ -34,12 +28,10 @@ const AboutSection = () => {
           intuitive interfaces, seamless user experiences, and
           performance-focused solutions.
         </p>
-        <Button
-          className="text-smaller hover:opacity-85"
-          color="bg-primary"
-          download
-        >
-          Resume
+        <Button className="text-smaller hover:opacity-85" color="bg-primary">
+          <a href="@assets/SANDESH JOSHI PCV.pdf" download>
+            Resume
+          </a>
         </Button>
         <div className="flex gap-2 items-center text-smaller">
           Follow me:
@@ -54,6 +46,13 @@ const AboutSection = () => {
             </a>
           ))}
         </div>
+      </div>
+      <div className="col-span-2 lg:w-full">
+        <img
+          src={profilePicture}
+          alt="image"
+          className="rounded-lg object-cover w-full h-full  aspect-3/4 "
+        />
       </div>
     </div>
   );

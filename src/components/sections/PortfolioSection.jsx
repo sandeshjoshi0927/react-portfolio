@@ -1,9 +1,9 @@
 import Heading from "@components/Heading";
 import ProjectCard from "@components/ProjectCard";
 import { FaReact, RiTailwindCssFill, FaHtml5, FaCss3Alt, FaJs } from "@/icons";
-import darazClone from "/public/daraz-clone.png";
-import todoApp from "/public/todo-app.png";
-import weatherApp from "/public/weather-app.png";
+import darazClone from "@assets/daraz-clone.png";
+import todoApp from "@assets/todo-app.png";
+import weatherApp from "@assets/weather-app.png";
 
 const PortfolioSection = () => {
   const projects = [
