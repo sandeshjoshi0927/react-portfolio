@@ -19,7 +19,7 @@ const ProjectCard = ({ project }) => {
   }, [openViewMore]);
 
   return (
-    <div className="hover:drop-shadow-xl h-full">
+    <div className="hover:drop-shadow-xl h-full flex flex-col">
       <div className="relative">
         <img
           src={project.thumbnail}
@@ -55,12 +55,19 @@ const ProjectCard = ({ project }) => {
           )}
         </div>
       </div>
-      <div className="rounded-bl-2xl rounded-br-2xl bg-secondary text-white flex flex-col p-4 gap-2">
-        <h2 className="text-small font-semibold">{project.name}</h2>
-        <p className="text-smaller truncate">{project.desc}</p>
+      <div className="rounded-bl-2xl rounded-br-2xl bg-secondary text-white flex flex-col p-4 gap-2 grow">
+        <h2 className="text-small font-semibold tracking-wide">
+          {project.name}
+        </h2>
+        <p className="text-smaller opacity-80 line-clamp-2  grow">
+          {project.desc}
+        </p>
         <div className="text-smallest flex items-center gap-3">
           {project.techStacks.map((stack, idx) => (
-            <span key={idx} className="flex items-center gap-1">
+            <span
+              key={idx}
+              className="flex items-center gap-1 px-2 py-1 rounded-full bg-white/10 border border-white/10"
+            >
               {stack.icon}
               {stack.name}
             </span>
