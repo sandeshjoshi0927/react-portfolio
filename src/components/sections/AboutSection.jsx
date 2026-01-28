@@ -1,6 +1,6 @@
 import Button from "@/components/Button";
-import profilePicture from "@/assets/images/me.jpg";
 import { socials } from "@/constants";
+import profilePicture from "@/assets/images/me.jpg";
 
 const AboutSection = () => {
   return (

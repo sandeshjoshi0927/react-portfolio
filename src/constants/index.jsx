@@ -28,9 +28,15 @@ import {
   FaLinkedin,
 } from "@/constants/icons";
 
+import {
+  storeItThumbnail,
+  darazCloneThumbnail,
+  weatherAppThumbnail,
+} from "@/constants/images";
+
 export const projects = [
   {
-    thumbnail: "/src/assets/images/storage-management.png",
+    thumbnail: storeItThumbnail,
     name: "StoreIt",
     desc: "Storage Management Solution - Manage your files the best way.",
     liveUrl: "https://storage-management-peach.vercel.app/",
@@ -43,7 +49,7 @@ export const projects = [
   },
   {
     name: "Daraz Clone",
-    thumbnail: "/src/assets/images/daraz-clone.png",
+    thumbnail: darazCloneThumbnail,
     desc: "UI replication of South Asia's leading ecommerce marketplace.",
     liveUrl: "https://sandeshjoshi0927.github.io/daraz-clone/",
     githubUrl: "https://github.com/sandeshjoshi0927/daraz-clone",
@@ -55,7 +61,7 @@ export const projects = [
   },
   {
     name: "Weather App",
-    thumbnail: "/src/assets/images/weather-app.png",
+    thumbnail: weatherAppThumbnail,
     desc: "Live weather application which shows the current weather of the places.",
     liveUrl: "https://sandeshjoshi0927.github.io/weather-app/",
     githubUrl: "https://github.com/sandeshjoshi0927/weather-app",
