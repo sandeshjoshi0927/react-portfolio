@@ -141,10 +141,12 @@ export const services = [
 
 export const socials = [
   {
+    name: "LinkedIn",
     url: "https://www.linkedin.com/in/sandesh-joshi-538110200/",
     icon: <FaLinkedin />,
   },
   {
+    name: "Github",
     url: "https://github.com/sandeshjoshi0927",
     icon: <FaGithub />,
   },

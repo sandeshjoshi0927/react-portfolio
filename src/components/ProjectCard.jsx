@@ -21,12 +21,12 @@ const ProjectCard = ({
   }, [openViewMore]);
 
   return (
-    <div className="hover:drop-shadow-xl h-full flex flex-col">
-      <div className="relative">
+    <div className="h-full flex flex-col transition-all duration-300 hover:drop-shadow-[0_10px_15px_rgba(0,0,0,0.15)]">
+      <div className="relative rounded-tr-2xl rounded-tl-2xl bg-[#f2f2f2] p-2">
         <img
           src={`${thumbnail}`}
           alt="project"
-          className="object-cover rounded-tr-2xl rounded-tl-2xl border-l border-t border-r border-secondary grayscale-50"
+          className="object-cover grayscale-50 hover:translate-y-1 transition-all"
         />
         <div
           className="absolute text-white z-98 top-2 right-2 p-2 rounded-full bg-secondary text-small cursor-pointer"

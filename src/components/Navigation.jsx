@@ -26,7 +26,16 @@ const Navigation = () => {
   return (
     <div className="sticky top-0 bg-white opacity-95 z-99">
       <div className="grid grid-cols-12 items-center py-4 px-10 container m-auto w-full">
-        <div className="col-span-2">SJ</div>
+        <div className="col-span-2">
+          <a href="#">
+            <img
+              src="/src/assets/icons/logo.svg"
+              width={44}
+              height={44}
+              alt="logo"
+            />
+          </a>
+        </div>
         <div className="col-span-10 hidden md:grid grid-cols-12 items-center">
           <ul className="col-span-10 flex-around">
             {menuItems.map((menu, index) => (
@@ -70,7 +79,7 @@ const Navigation = () => {
           )}
         </div>
       </div>
-      <hr className="border-b border-gray-200" />
+      <hr className="border-b border-gray-200/80" />
     </div>
   );
 };

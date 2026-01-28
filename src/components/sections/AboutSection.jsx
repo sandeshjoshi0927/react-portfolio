@@ -13,26 +13,30 @@ const AboutSection = () => {
             {/* TODO */}
           </p>
         </div>
-        <p className="text-smaller font-normal opacity-40">
+        <p className="text-normal font-normal opacity-40">
           Passionate about building efficient, modern web applications with
           intuitive interfaces, seamless user experiences, and
           performance-focused solutions.
         </p>
-        <Button className="text-smaller hover:opacity-85" color="bg-primary">
+        <Button
+          className="text-smaller hover:opacity-85 uppercase"
+          color="bg-primary"
+        >
           <a href="@assets/SANDESH JOSHI PCV.pdf" download>
             Download Resume
           </a>
         </Button>
-        <div className="flex gap-2 items-center text-smaller">
-          Follow me:
+        <div className="flex flex-col items-start gap-2 text-small">
+          Follow:
           {socials.map((social, index) => (
             <a
               key={index}
               href={social.url}
               target="_blank"
-              className="text-normal"
+              className="text-small flex items-center gap-1"
             >
               {social.icon}
+              <p>{social.name}</p>
             </a>
           ))}
         </div>
