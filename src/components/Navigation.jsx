@@ -1,16 +1,10 @@
 import { useState, useRef, useEffect } from "react";
 import Button from "./Button";
 import LinkItem from "./LinkItem";
-import { GiHamburgerMenu } from "../icons";
+import { GiHamburgerMenu } from "../constants/icons";
+import { menuItems } from "@/constants";
 
 const Navigation = () => {
-  const menuItems = [
-    { title: "Home", path: "#" },
-    { title: "Skills", path: "#skills" },
-    { title: "Portfolio", path: "#portfolio" },
-    { title: "Service", path: "#service" },
-  ];
-
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
 
   const mobileRef = useRef(null);

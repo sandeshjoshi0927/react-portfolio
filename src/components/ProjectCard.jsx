@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { IoMdMore, FaPlayCircle, FaGithub } from "../icons";
+import { IoMdMore, FaPlayCircle, FaGithub } from "../constants/icons";
 
 const ProjectCard = ({ project }) => {
   const [openViewMore, setViewMore] = useState(false);

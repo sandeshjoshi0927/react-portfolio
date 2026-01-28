@@ -1,18 +1,8 @@
 import Button from "@components/Button";
-import { FaLinkedin, FaGithub } from "@/icons";
 import profilePicture from "@assets/me.jpg";
+import { socials } from "@/constants";
 
 const AboutSection = () => {
-  const socials = [
-    {
-      url: "https://www.linkedin.com/in/sandesh-joshi-538110200/",
-      icon: <FaLinkedin />,
-    },
-    {
-      url: "https://github.com/sandeshjoshi0927",
-      icon: <FaGithub />,
-    },
-  ];
   return (
     <div className="grid grid-cols-6 gap-4 md:gap-8 items-center">
       <div className="col-span-6 lg:col-span-4 space-y-4">

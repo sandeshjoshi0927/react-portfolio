@@ -1,5 +1,5 @@
 import React from "react";
-import { IoMdMailOpen } from "@/icons";
+import { IoMdMailOpen } from "@/constants/icons";
 import Button from "@components/Button";
 
 const ContactSection = () => {

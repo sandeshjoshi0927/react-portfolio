@@ -30,6 +30,7 @@ import { FaChevronCircleDown } from "react-icons/fa";
 import { IoMdMailOpen } from "react-icons/io";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaLinkedin } from "react-icons/fa";
+import { SiAppwrite } from "react-icons/si";
 
 export {
   FaReact,
@@ -64,4 +65,5 @@ export {
   IoMdMailOpen,
   GiHamburgerMenu,
   FaLinkedin,
+  SiAppwrite,
 };
