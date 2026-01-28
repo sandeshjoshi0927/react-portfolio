@@ -1,6 +1,6 @@
-import Heading from "@components/Heading";
-import ProjectCard from "@components/ProjectCard";
-import { projects } from "../../constants/index";
+import Heading from "@/components/Heading";
+import ProjectCard from "@/components/ProjectCard";
+import { projects } from "@/constants/index";
 
 const PortfolioSection = () => {
   return (

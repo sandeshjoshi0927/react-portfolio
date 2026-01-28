@@ -30,7 +30,7 @@ import {
 
 export const projects = [
   {
-    thumbnail: "storage-management.png",
+    thumbnail: "/src/assets/images/storage-management.png",
     name: "StoreIt",
     desc: "Storage Management Solution - Manage your files the best way.",
     liveUrl: "https://storage-management-peach.vercel.app/",
@@ -43,7 +43,7 @@ export const projects = [
   },
   {
     name: "Daraz Clone",
-    thumbnail: "daraz-clone.png",
+    thumbnail: "/src/assets/images/daraz-clone.png",
     desc: "UI replication of South Asia's leading ecommerce marketplace.",
     liveUrl: "https://sandeshjoshi0927.github.io/daraz-clone/",
     githubUrl: "https://github.com/sandeshjoshi0927/daraz-clone",
@@ -55,7 +55,7 @@ export const projects = [
   },
   {
     name: "Weather App",
-    thumbnail: "weather-app.png",
+    thumbnail: "/src/assets/images/weather-app.png",
     desc: "Live weather application which shows the current weather of the places.",
     liveUrl: "https://sandeshjoshi0927.github.io/weather-app/",
     githubUrl: "https://github.com/sandeshjoshi0927/weather-app",

@@ -1,5 +1,4 @@
 import React from "react";
-import LinkItem from "@components/LinkItem";
 
 const FooterSection = () => {
   return (

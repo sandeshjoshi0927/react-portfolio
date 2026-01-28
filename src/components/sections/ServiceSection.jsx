@@ -1,7 +1,7 @@
 import React from "react";
-import Heading from "@components/Heading";
-import ServiceCard from "@components/ServiceCard";
-import { services } from "@/constants";
+import Heading from "@/components/Heading";
+import ServiceCard from "@/components/ServiceCard";
+import { services } from "@/constants/index";
 
 const ServiceSection = () => {
   return (

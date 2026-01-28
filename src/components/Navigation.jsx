@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
-import Button from "./Button";
-import LinkItem from "./LinkItem";
-import { GiHamburgerMenu } from "../constants/icons";
+import Button from "@/components/Button";
+import LinkItem from "@/components/LinkItem";
+import { GiHamburgerMenu } from "@/constants/icons";
 import { menuItems } from "@/constants";
 
 const Navigation = () => {
