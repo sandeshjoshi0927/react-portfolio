@@ -12,7 +12,8 @@ import { useEffect } from "react";
 function App() {
   useEffect(() => {
     AOS.init({
-      duration: 800,
+      offset: 400,
+      duration: 1000,
       easing: "ease-out",
       once: false,
     });
@@ -22,16 +23,16 @@ function App() {
     <div>
       <Navigation />
       <div className="container m-auto">
-        <section data-aos="fade-down">
+        <section data-aos="fade-up">
           <AboutSection />
         </section>
-        <section data-aos="fade-down">
+        <section data-aos="fade-up">
           <SkillSection />
         </section>
-        <section data-aos="fade-down">
+        <section data-aos="fade-up">
           <PortfolioSection />
         </section>
-        <section data-aos="fade-down">
+        <section data-aos="fade-up">
           <ServiceSection />
         </section>
         <ContactSection />

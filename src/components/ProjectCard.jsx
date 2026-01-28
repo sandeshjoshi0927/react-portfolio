@@ -18,11 +18,13 @@ const ProjectCard = ({ project }) => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [openViewMore]);
 
+  console.log(project.thumbnail);
+
   return (
     <div className="hover:drop-shadow-xl h-full flex flex-col">
       <div className="relative">
         <img
-          src={project.thumbnail}
+          src={`/src/assets/${project.thumbnail}`}
           alt="project"
           className="object-cover rounded-tr-2xl rounded-tl-2xl border-l border-t border-r border-secondary grayscale-50"
         />
