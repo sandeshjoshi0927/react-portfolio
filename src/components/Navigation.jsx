@@ -3,6 +3,7 @@ import Button from "@/components/Button";
 import LinkItem from "@/components/LinkItem";
 import { GiHamburgerMenu } from "@/constants/icons";
 import { menuItems } from "@/constants";
+import logo from "@/assets/icons/logo.svg";
 
 const Navigation = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
@@ -28,12 +29,7 @@ const Navigation = () => {
       <div className="grid grid-cols-12 items-center py-4 px-10 container m-auto w-full">
         <div className="col-span-2">
           <a href="#">
-            <img
-              src="/src/assets/icons/logo.svg"
-              width={44}
-              height={44}
-              alt="logo"
-            />
+            <img src={logo} width={44} height={44} alt="logo" />
           </a>
         </div>
         <div className="col-span-10 hidden md:grid grid-cols-12 items-center">
