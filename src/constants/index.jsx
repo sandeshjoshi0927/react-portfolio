@@ -30,6 +30,7 @@ import {
 
 import {
   storeItThumbnail,
+  moveeThumbnail,
   darazCloneThumbnail,
   weatherAppThumbnail,
 } from "@/constants/images";
@@ -48,15 +49,15 @@ export const projects = [
     ],
   },
   {
-    name: "Daraz Clone",
-    thumbnail: darazCloneThumbnail,
-    desc: "UI replication of South Asia's leading ecommerce marketplace.",
-    liveUrl: "https://sandeshjoshi0927.github.io/daraz-clone/",
-    githubUrl: "https://github.com/sandeshjoshi0927/daraz-clone",
+    thumbnail: moveeThumbnail,
+    name: "Movee",
+    desc: "Watch Free Movies - Watch trending movies in one place.",
+    liveUrl: "https://movee-sooty.vercel.app/",
+    githubUrl: "https://github.com/sandeshjoshi0927/movee",
     techStacks: [
-      { icon: <FaHtml5 />, name: "HTML" },
-      { icon: <FaCss3Alt />, name: "CSS" },
-      { icon: <FaJs />, name: "Javascript" },
+      { icon: <RiNextjsFill />, name: "Next JS" },
+      { icon: <RiTailwindCssFill />, name: "TailwindCSS" },
+      { icon: <SiAppwrite />, name: "Appwrite" },
     ],
   },
   {
