@@ -31,7 +31,6 @@ import {
 import {
   storeItThumbnail,
   moveeThumbnail,
-  darazCloneThumbnail,
   weatherAppThumbnail,
 } from "@/constants/images";
 
