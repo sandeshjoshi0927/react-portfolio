@@ -1,8 +1,13 @@
-const Heading = ({ title, subTitle }) => {
+const Heading = ({ eyebrow, title, subTitle }) => {
   return (
-    <div>
-      <div className="text-center text-big uppercase font-bold">{title}</div>
-      <div className="text-small opacity-40 text-center">{subTitle}</div>
+    <div className="space-y-3">
+      {eyebrow && <p className="eyebrow">{eyebrow}</p>}
+      <h2 className="text-big font-semibold tracking-tight">{title}</h2>
+      {subTitle && (
+        <p className="text-small" style={{ color: "var(--color-muted)" }}>
+          {subTitle}
+        </p>
+      )}
     </div>
   );
 };

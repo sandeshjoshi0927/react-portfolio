@@ -31,6 +31,7 @@ import { IoMdMailOpen } from "react-icons/io";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaLinkedin } from "react-icons/fa";
 import { SiAppwrite } from "react-icons/si";
+import { IoMdClose } from "react-icons/io";
 
 export {
   FaReact,
@@ -66,4 +67,5 @@ export {
   GiHamburgerMenu,
   FaLinkedin,
   SiAppwrite,
+  IoMdClose,
 };

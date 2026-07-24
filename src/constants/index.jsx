@@ -128,18 +128,22 @@ export const skills = [
 
 export const services = [
   {
+    tag: "ui/ux",
     title: "UI / UX Design",
     desc: "Creating intuitive, user-friendly interfaces with a focus on usability, accessibility, and modern design principles.",
   },
   {
+    tag: "rwd",
     title: "Responsive Design",
     desc: "Building fully responsive layouts that adapt seamlessly across desktops, tablets, and mobile devices.",
   },
   {
+    tag: "dev",
     title: "Development",
     desc: "Converting designs and ideas into high-quality, scalable code using modern frontend technologies.",
   },
   {
+    tag: "perf",
     title: "Web Performance Optimization",
     desc: "Optimizing websites for speed, performance, and smooth user experience using best practices.",
   },

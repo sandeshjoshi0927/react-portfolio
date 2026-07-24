@@ -1,15 +1,18 @@
-import React from "react";
-
-const ServiceCard = ({ service, index }) => {
+const ServiceCard = ({ service }) => {
   return (
-    <div className="bg-secondary text-white p-6 flex h-full flex-col justify-between rounded-xl">
-      <h1 className="text-main-heading text-primary brightness-150 flex flex-start tracking-wider">
-        0{index + 1}
-      </h1>
+    <div className="h-full flex flex-col gap-4 p-6 rounded-md border border-line bg-paper hover:border-accent transition-colors">
+      <span
+        className="inline-flex w-fit px-2.5 py-1 rounded text-smallest bg-accent-soft"
+        style={{ fontFamily: "var(--font-mono)", color: "var(--color-accent)" }}
+      >
+        {service.tag}
+      </span>
 
       <div className="space-y-2">
-        <h1 className="text-small font-bold tracking-wide">{service.title}</h1>
-        <p className="text-smaller opacity-80">{service.desc}</p>
+        <h3 className="text-normal font-semibold tracking-tight">{service.title}</h3>
+        <p className="text-smaller" style={{ color: "var(--color-muted)" }}>
+          {service.desc}
+        </p>
       </div>
     </div>
   );

@@ -1,75 +1,56 @@
-import { useState, useRef, useEffect } from "react";
-import { IoMdMore, FaPlayCircle, FaGithub } from "@/constants/icons";
+import { FaPlayCircle, FaGithub } from "@/constants/icons";
 
 const ProjectCard = ({
   project: { thumbnail, name, desc, liveUrl, githubUrl, techStacks },
 }) => {
-  const [openViewMore, setViewMore] = useState(false);
-
-  const btnRef = useRef(null);
-
-  useEffect(() => {
-    if (!openViewMore) return;
-
-    const handleClickOutside = (e) => {
-      if (btnRef.current && !btnRef.current.contains(e.target)) {
-        setViewMore(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [openViewMore]);
-
   return (
-    <div className="h-full flex flex-col transition-all duration-300 hover:drop-shadow-[0_10px_15px_rgba(0,0,0,0.15)]">
-      <div className="relative rounded-tr-2xl rounded-tl-2xl bg-[#f2f2f2] p-2">
+    <div className="h-full flex flex-col rounded-md border border-line bg-paper overflow-hidden transition-colors hover:border-accent group">
+      <div className="relative overflow-hidden border-b border-line bg-surface">
         <img
-          src={`${thumbnail}`}
-          alt="project"
-          className="object-cover grayscale-50 hover:translate-y-1 transition-all"
+          src={thumbnail}
+          alt={`${name} preview`}
+          className="w-full object-cover aspect-16/10 grayscale-[35%] group-hover:grayscale-0 transition-all duration-300"
         />
-        <div
-          className="absolute text-white z-98 top-2 right-2 p-2 rounded-full bg-secondary text-small cursor-pointer"
-          ref={btnRef}
-          onClick={() => setViewMore(!openViewMore)}
-        >
-          <IoMdMore />
-
-          {openViewMore && (
-            <div className="absolute z-98 top-12 right-1 bg-secondary rounded-xl px-4 py-2 text-smaller flex flex-col gap-2">
-              <a
-                href={liveUrl}
-                target="_blank"
-                className="flex gap-1 items-center hover:opacity-85"
-              >
-                <FaPlayCircle />
-                <span>Preview</span>
-              </a>
-              <a
-                href={githubUrl}
-                target="_blank"
-                className="flex gap-1 items-center hover:opacity-85"
-              >
-                <FaGithub />
-                <span>Github</span>
-              </a>
-            </div>
-          )}
-        </div>
       </div>
-      <div className="rounded-bl-2xl rounded-br-2xl bg-secondary text-white flex flex-col p-4 gap-2 grow">
-        <h2 className="text-small font-semibold tracking-wide">{name}</h2>
-        <p className="text-smaller opacity-80 line-clamp-2  grow">{desc}</p>
-        <div className="text-smallest flex items-center gap-3">
+
+      <div className="flex flex-col gap-3 p-5 grow">
+        <h3 className="text-normal font-semibold tracking-tight">{name}</h3>
+        <p className="text-smaller line-clamp-2 grow" style={{ color: "var(--color-muted)" }}>
+          {desc}
+        </p>
+
+        <div className="flex flex-wrap items-center gap-2 text-smallest">
           {techStacks.map((stack, idx) => (
             <span
               key={idx}
-              className="flex items-center gap-1 px-2 py-1 rounded-full bg-white/10 border border-white/10"
+              className="flex items-center gap-1.5 px-2 py-1 rounded border border-line"
+              style={{ fontFamily: "var(--font-mono)", color: "var(--color-muted)" }}
             >
               {stack.icon}
               {stack.name}
             </span>
           ))}
+        </div>
+
+        <div className="flex items-center gap-4 pt-2 mt-1 border-t border-line text-smaller">
+          <a
+            href={liveUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-1.5 pt-3 hover:text-accent transition-colors"
+          >
+            <FaPlayCircle />
+            <span>Live preview</span>
+          </a>
+          <a
+            href={githubUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-1.5 pt-3 hover:text-accent transition-colors"
+          >
+            <FaGithub />
+            <span>Source</span>
+          </a>
         </div>
       </div>
     </div>

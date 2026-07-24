@@ -4,12 +4,13 @@ import { projects } from "@/constants/index";
 
 const PortfolioSection = () => {
   return (
-    <div className="space-y-10" id="portfolio">
+    <div className="space-y-10 w-full" id="portfolio">
       <Heading
+        eyebrow="// projects"
         title="Featured Projects"
-        subTitle="Some of the works I have done"
+        subTitle="A few things I've shipped and open-sourced"
       />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {projects.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}

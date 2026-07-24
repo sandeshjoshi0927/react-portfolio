@@ -1,72 +1,73 @@
-import React from "react";
 import { IoMdMailOpen } from "@/constants/icons";
 import Button from "@/components/Button";
 
+const fieldClass =
+  "w-full bg-transparent border-b border-line py-3 text-small placeholder:text-muted focus:outline-none focus:border-accent transition-colors";
+
 const ContactSection = () => {
   return (
-    <div className="mx-10 my-20 grid grid-cols-12 gap-4 lg:gap-10" id="contact">
-      <div className="col-span-10 lg:col-span-5">
-        <h1 className="text-big">
-          Let's Chat. <br />
-          Get in touch with me.
-        </h1>
-        <div className="flex items-center gap-2 text-small">
-          <IoMdMailOpen />
-          <p>
-            Mail me at{" "}
-            <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=sandeshjoshi2211@gmail.com"
-              target="_blank"
-              className="text-primary"
-            >
-              sandeshjoshi2211@gmail.com
-            </a>
-          </p>
+    <div
+      className="w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 py-16"
+      id="contact"
+    >
+      <div className="lg:col-span-5 space-y-6">
+        <p className="eyebrow">// contact</p>
+        <h2 className="text-big font-semibold tracking-tight leading-tight">
+          Let's build
+          <br />
+          something together.
+        </h2>
+        <p className="text-normal max-w-sm" style={{ color: "var(--color-muted)" }}>
+          Have a project in mind, or just want to talk shop? My inbox is
+          open.
+        </p>
+        <div className="flex items-center gap-2 text-small pt-2">
+          <IoMdMailOpen style={{ color: "var(--color-accent)" }} />
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=sandeshjoshi2211@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-accent transition-colors"
+            style={{ fontFamily: "var(--font-mono)" }}
+          >
+            sandeshjoshi2211@gmail.com
+          </a>
         </div>
       </div>
-      <div className="col-span-12 lg:col-span-7">
+
+      <div className="lg:col-span-7">
         <form
           action="https://formspree.io/f/xzbndvvr"
           method="POST"
           id="form"
-          className="w-full space-y-4 text-small"
+          className="w-full space-y-6 text-small"
         >
-          {/* Email */}
           <input
             type="email"
             id="email"
             name="email"
             placeholder="Your email*"
             required
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
+            className={fieldClass}
           />
-
-          {/* Subject */}
           <input
             type="text"
             id="subject"
             name="subject"
             placeholder="Subject"
             required
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
+            className={fieldClass}
           />
-
-          {/* Message */}
           <textarea
             name="message"
             id="message"
-            rows="5"
+            rows="4"
             placeholder="Say something?"
             required
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 resize-none focus:outline-none focus:ring-2 focus:ring-primary"
+            className={`${fieldClass} resize-none`}
           />
-
-          {/* Button */}
-          <Button
-            type="submit"
-            className="w-full md:w-auto px-8 py-3 bg-primary text-white rounded-lg hover:opacity-90 transition"
-          >
-            Send
+          <Button type="submit" variant="primary" className="w-full sm:w-auto">
+            Send message
           </Button>
         </form>
       </div>

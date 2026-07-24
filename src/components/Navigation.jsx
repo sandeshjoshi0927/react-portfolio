@@ -1,13 +1,11 @@
 import { useState, useRef, useEffect } from "react";
-import Button from "@/components/Button";
 import LinkItem from "@/components/LinkItem";
-import { GiHamburgerMenu } from "@/constants/icons";
+import { GiHamburgerMenu, IoMdClose } from "@/constants/icons";
 import { menuItems } from "@/constants";
 import logo from "@/assets/icons/logo.svg";
 
 const Navigation = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
-
   const mobileRef = useRef(null);
 
   useEffect(() => {
@@ -20,62 +18,77 @@ const Navigation = () => {
     };
 
     document.addEventListener("mousedown", handleOutsideClick);
-
     return () => document.removeEventListener("mousedown", handleOutsideClick);
   }, [openMobileMenu]);
 
   return (
-    <div className="sticky top-0 bg-white opacity-95 z-99">
-      <div className="grid grid-cols-12 items-center py-4 px-10 container m-auto w-full">
-        <div className="col-span-2">
-          <a href="#">
-            <img src={logo} width={44} height={44} alt="logo" />
-          </a>
-        </div>
-        <div className="col-span-10 hidden md:grid grid-cols-12 items-center">
-          <ul className="col-span-10 flex-around">
+    <div className="sticky top-0 z-50 bg-paper/95 backdrop-blur-sm relative">
+      <div className="max-w-6xl mx-auto flex items-center gap-4 px-6 sm:px-10">
+        <a href="#" className="flex items-center gap-2 py-3 shrink-0">
+          <img src={logo} width={28} height={28} alt="logo" />
+          <span
+            className="hidden sm:inline text-smaller"
+            style={{ fontFamily: "var(--font-mono)", color: "var(--color-muted)" }}
+          >
+            sandesh.dev
+          </span>
+        </a>
+
+        {/* desktop: editor-tab style nav */}
+        <nav className="hidden lg:flex items-end flex-1 h-full">
+          <ul className="flex items-stretch">
             {menuItems.map((menu, index) => (
               <LinkItem key={index} path={menu.path}>
                 {menu.title}
               </LinkItem>
             ))}
           </ul>
-          <div className="col-span-2 place-self-end">
-            <Button
-              to="#contact"
-              color="bg-secondary"
-              className="hover:opacity-85"
-            >
-              Contact
-            </Button>
-          </div>
-        </div>
+          <div className="flex-1 border-b border-line h-full" />
+          <a
+            href="#contact"
+            className="mb-2.5 ml-4 shrink-0 px-4 py-1.5 rounded-md text-smaller cursor-pointer border border-ink text-ink hover:bg-ink hover:text-paper transition-colors"
+            style={{ fontFamily: "var(--font-mono)" }}
+          >
+            contact()
+          </a>
+        </nav>
 
-        {/* mobile navigation */}
-        <div className="col-span-10 flex justify-end md:hidden" ref={mobileRef}>
-          <GiHamburgerMenu
-            className="text-secondary"
+        {/* mobile trigger */}
+        <div className="flex-1 border-b border-line h-full lg:hidden" />
+        <div className="lg:hidden py-3" ref={mobileRef}>
+          <button
+            aria-label={openMobileMenu ? "Close menu" : "Open menu"}
             onClick={() => setOpenMobileMenu(!openMobileMenu)}
-          />
+            className="text-ink text-lg p-1"
+          >
+            {openMobileMenu ? <IoMdClose /> : <GiHamburgerMenu />}
+          </button>
+
           {openMobileMenu && (
-            <div className="absolute top-14 bg-secondary text-white container m-auto px-10 py-4 right-0 left-0 space-y-4">
+            <div className="absolute top-full left-0 right-0 bg-paper border-b border-line px-6 py-4 space-y-1 shadow-[0_12px_24px_-12px_rgba(20,22,26,0.15)]">
               {menuItems.map((menu, index) => (
-                <LinkItem key={index} path={menu.path}>
+                <a
+                  key={index}
+                  href={menu.path}
+                  onClick={() => setOpenMobileMenu(false)}
+                  className="block py-2 text-small border-b border-line last:border-none"
+                  style={{ fontFamily: "var(--font-mono)" }}
+                >
                   {menu.title}
-                </LinkItem>
+                </a>
               ))}
-              <Button
-                to="#contact"
-                color="bg-primary"
-                className="hover:opacity-85"
+              <a
+                href="#contact"
+                onClick={() => setOpenMobileMenu(false)}
+                className="block mt-3 px-4 py-2 rounded-md text-center text-smaller bg-ink text-paper"
+                style={{ fontFamily: "var(--font-mono)" }}
               >
-                Contact
-              </Button>
+                contact()
+              </a>
             </div>
           )}
         </div>
       </div>
-      <hr className="border-b border-gray-200/80" />
     </div>
   );
 };
